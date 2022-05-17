@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Scripts/PlayerMovement.gd" type="Script" id=1]
+[ext_resource path="res://Images/FemaleChar.png" type="Texture" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 47, 129.625 )
+
+[node name="Female" type="KinematicBody2D"]
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+drag_margin_h_enabled = true
+drag_margin_left = 0.3
+drag_margin_right = 0.3
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 10, -37 )
+scale = Vector2( 0.546632, 0.524831 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 6, -24.625 )
+shape = SubResource( 1 )
